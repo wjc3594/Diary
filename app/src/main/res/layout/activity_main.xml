@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--总体采用线性垂直布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!--镶嵌一个标题栏-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_vertical"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="日记本"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--RecyclerView控件-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"/>
+
+    <!--画一条分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEE9E9"/>
+
+    <!--留出一些空白-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:text=""/>
+
+    <!--底部一个“新建”一个“删除”按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!--“新建”按钮-->
+        <Button
+            android:id="@+id/build_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:textSize="18sp"
+            android:background="#48DECC"
+            android:text="新建"/>
+
+        <!--“删除”按钮-->
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:background="#48DECC"
+            android:text="删除"/>
+    </LinearLayout>
+</LinearLayout>

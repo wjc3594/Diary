@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--登录界面总体布局为垂直线性布局-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--背景图片-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login"/>
+
+    <!--页面布局-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <!--留出一些空白-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text=""/>
+
+        <!--登录界面标题-->
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="26sp"
+            android:textStyle="italic"
+            android:text="记录你的点滴生活！"
+            />
+
+        <!--留出一些空白-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text=""/>
+
+        <!--用户名和密码部分采用垂直线性布局-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--用户名部分采用线性水平布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--用户名-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="用户名："
+                    android:paddingRight="0dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary" />
+
+                <!--用户名输入-->
+                <EditText
+                    android:id="@+id/admin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="请输入用户名" />
+            </LinearLayout>
+
+            <!--密码部分采用线性水平布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                    <!--密码-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="密码："
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:paddingRight="0dp"/>
+
+                    <!--密码输入-->
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:password="true"
+                        android:hint="请输入密码" />
+            </LinearLayout>
+            <!--密码部分-->
+        </LinearLayout>
+        <!--用户名密码部分-->
+
+        <!--是否记住密码-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--'是否记住密码'复选框-->
+            <CheckBox
+                android:id="@+id/save_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"/>
+
+            <!--复选框提示信息-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/save_password"
+                android:textSize="18sp"
+                android:text="是否记住密码"/>
+
+            <!--复选框提示信息-->
+            <TextView
+                android:id="@+id/show_password_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:text="显示密码"/>
+
+            <!--'是否明文显示密码'复选框-->
+            <CheckBox
+                android:id="@+id/show_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/show_password_info"/>
+
+        </RelativeLayout>
+        <!--是否记住密码部分-->
+
+        <!--留出一些空白-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text=""/>
+
+        <!--画一条分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEE9E9"/>
+
+        <!--留出一些空白-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:text=""/>
+
+        <!--登录按钮-->
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:text="登录"
+            android:background="#66CD00"/>
+    </LinearLayout>
+</FrameLayout>

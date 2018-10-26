@@ -1,0 +1,7 @@
+<litepal>
+    <dbname value="diary"/>
+    <version value="1"/>
+    <list>
+        <mapping class="android.mainactivity.diary"/>
+    </list>
+</litepal>
