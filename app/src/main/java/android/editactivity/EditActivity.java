@@ -82,11 +82,15 @@ public class EditActivity extends AppCompatActivity {
                             SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日");
                             String time=sdf.format(new java.util.Date());
                             diary mDiary=new diary(content,time);
-                            ContentValues values = new ContentValues();
-                            values.put("time", mDiary.getTime().toString());
-                            DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
-                            values.put("content", mDiary.getContent().toString());
-                            DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
+                            if(signal==0){
+                                mDiary.save();
+                            }else{
+                                ContentValues values = new ContentValues();
+                                values.put("time", mDiary.getTime().toString());
+                                DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
+                                values.put("content", mDiary.getContent().toString());
+                                DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
+                            }
                             finish();
                         }
                     });
